@@ -13,3 +13,128 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+  text-align: center;
+}
+.container {
+  padding: 20px;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.link {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  font-size: 25px;
+  color: rgb(237, 140, 13);
+  text-decoration: none;
+}
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.l{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button{
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: beige;
+  border: 1px solid beige;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: burlywood;
+}
+.section{
+  display: flex;justify-items: center;justify-content: center;align-items: center;flex-direction: column;gap: 20px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+li {
+  list-style: none;
+}
+.view {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task {
+  width: 30%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  font-weight: bold;
+}
+
+.task-link {
+  text-align: center;
+  margin-top: 5px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+.button {
+  background-color: rgb(203, 144, 66);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(237, 152, 4);
+  color: beige;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+  color: white;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}

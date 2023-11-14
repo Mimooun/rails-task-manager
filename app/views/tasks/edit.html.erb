@@ -1,0 +1,26 @@
+<!-- app/views/tasks/edit.html.erb -->
+
+<h1>Modifier la task</h1>
+
+<%= form_with(model: @task, url: task_path(@task), method: :patch, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :details %>
+    <%= form.text_area :details %>
+  </div>
+
+  <div class="field">
+    <%= form.label :completed %>
+    <%= form.check_box :completed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Edite" %>
+  </div>
+<% end %>
+
+<%= link_to "Retour à la liste des tâches", tasks_path %>

@@ -1,0 +1,18 @@
+<h1>Liste de Tasks</h1>
+
+<div class="view">
+  <% @tasks.each do |task| %>
+    <div class="task">
+      <div class="task-info">
+        <div class="task-title"><li><%= link_to task.title, task_path(task) %></li></div>
+        <div><%= task.details %></div>
+        <div><%= task.completed %></div>
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
+ <div class="task-link">
+      <%= link_to "Ajouter une tache", new_path %>
+      </div>

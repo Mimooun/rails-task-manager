@@ -1,0 +1,99 @@
+
+<%# <style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  .container {
+    max-width: 100%%;
+    margin: 0 auto;
+  }
+
+  .section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .field {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 5px;
+  }
+
+  .actions {
+    margin-top: 20px;
+  }
+
+  .button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #2980b9;
+  }
+
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    color: #3498db;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+</style> %>
+
+<h1>Nouvelle Tâche</h1>
+<div class="container">
+  <section class="section">
+    <%= form_with(model: @task, url: tasks_path, local: true) do |form| %>
+      <div class="field">
+        <label for="task_title">Titre </label>
+        <%= form.text_field :title, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <label for="task_details">Détails </label>
+        <%= form.text_area :details %>
+      </div>
+
+      <div class="field">
+        <label for="task_completed">Terminée </label>
+        <%= form.check_box :completed %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Valider", class: "button" %>
+      </div>
+    <% end %>
+  </section>
+</div>
+
+<%= link_to "Retour à la liste des tâches", tasks_path, class: "back-link" %>
